@@ -1,0 +1,65 @@
+.stats-section {
+  background: url('../../assets/bg-client.jpg') no-repeat center center / cover;
+  height: 400px;
+  position: relative;
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 1rem 0;
+  }
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    display: block;
+    padding: 3rem 0;
+  }
+}
+
+.stat {
+  position: relative;
+}
+
+.stat-content {
+  position: relative;
+  display: inline-block;
+}
+
+.number {
+  font-size: 120px;
+  font-weight: 700;
+  color: grey;
+  line-height: 1;
+  font-family: 'Arial', sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 40px;
+  }
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 17px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+
+  @media (max-width: 576px) {
+    font-size: 14px;
+  }
+}

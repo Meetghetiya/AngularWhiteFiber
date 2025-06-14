@@ -1,0 +1,85 @@
+swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 576px) {
+  swiper-container {
+    width: 300px;           /* Almost full width of the screen */
+    height: auto;          /* Let height adjust proportionally */
+    max-width: 100%;       /* Prevent overflow */
+  }
+}
+
+@media (max-width: 380px) {
+  swiper-container {
+    width: 80vh;           /* Almost full width of the screen */
+    height: auto;          /* Let height adjust proportionally */
+    max-width: 100%;       /* Prevent overflow */
+  }
+}
+
+.slide-img {
+  width: 300px;
+  height: 260px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+  .slide-img {
+    width: 90vw;           /* Almost full width of the screen */
+    height: auto;          /* Let height adjust proportionally */
+    max-width: 100%;       /* Prevent overflow */
+  }
+}
+
+body {
+  background: #000;
+  color: #000;
+}
+
+swiper-container {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block !important;
+  width: 100% !important;
+}
+
+swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper2 {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper2 swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper2 .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

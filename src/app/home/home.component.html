@@ -1,0 +1,185 @@
+<app-navbar (sectionNavigate)="navigateTo($event)"></app-navbar>
+<!-- <div class="mt-1">
+    <img src="assets/Home.jpg" class="img-fluid" style="height: 80%; max-width: 100%;" alt="Responsive image">
+</div> -->
+<app-slider></app-slider>
+
+<div
+  #aboutSection
+  class="container-fluid py-5"
+  style="background-color: #fdfff5"
+>
+  <app-heading
+    [titleText]="'Welcome to White Fiber '"
+    [textColor]="'grey'"
+    [titleText2]="'Empowering Global Trade with Sustainable Innovation'"
+  ></app-heading>
+
+  <p
+    #animatedText
+    class="mx-auto fs-6 text-muted text-start"
+    [class.visible]="isVisible"
+    style="max-width: 800px"
+  >
+    At White Fiber, we are more than just an OEM trading house — we are a
+    forward-thinking, environmentally responsible export company committed to
+    delivering eco-friendly disposable solutions to markets across the globe.
+    Based in Gujarat, India, we serve as a specialized OEM Trading House,
+    dedicated to innovation, sustainability, and excellence in international
+    trade.
+  </p>
+
+  <p
+    #animatedText
+    class="mx-auto fs-6 text-muted text-start"
+    [class.visible]="isVisible"
+    style="max-width: 800px"
+  >
+    Our diverse portfolio includes biodegradable sugarcane bagasse tableware,
+    paper cups, paper bags, tissue paper products. Every offering from White
+    Fiber is designed with a deep respect for nature, quality, and global
+    compliance standards.
+  </p>
+
+  <p
+    #animatedText
+    class="mx-auto fs-6 text-muted text-start"
+    [class.visible]="isVisible"
+    style="max-width: 800px"
+  >
+    As the trading arm of our well-established parent company, PIXEL CERAMIC,
+    which has earned global recognition in the tiles and sanitary ware industry,
+    we inherit a legacy of trust, quality, and international market expertise.
+  </p>
+</div>
+
+<!-- ---------------------- -->
+<div class="container-fluid text-center">
+  <app-heading
+    [titleText]="'Company Heritage'"
+    [titleText2]="'Built on Strength, Grown on Trust'"
+  ></app-heading>
+
+  <!-- --------------------- -->
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="fs-6 text-muted text-start">
+          White Fiber is built upon the strong foundation of
+          <strong>PIXEL CERAMIC</strong>, a respected name in the ceramic
+          industry. Leveraging years of global export experience and operational
+          excellence, White Fiber extends this legacy into the sustainable
+          products and agriculture segment.
+        </p>
+
+        <p class="fs-6 text-muted text-start">
+          Our evolution into the <strong>green packaging sector</strong> is
+          rooted in a growing global demand for alternatives to plastic.
+          Recognizing this shift, we strategically diversified into the
+          biodegradable product segment with a commitment to<strong
+            >eco-conscious business practices</strong
+          >.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------------------- -->
+
+<div class="container-fluid pt-5 pb-5" style="background-color: #fdfff5">
+  <app-heading
+    [titleText]="'White Fiber Tissues'"
+    [textColor]="'grey'"
+    [titleText2]="'Opportunitys & Future Growth Plans'"
+  ></app-heading>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="'Our Vision'"
+        [items]="visionItems"
+        [darkMode]="false"
+      ></app-mission-vision>
+    </div>
+
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="'Our Mission'"
+        [items]="missionItems"
+        [darkMode]="false"
+      ></app-mission-vision>
+    </div>
+  </div>
+</div>
+<app-why-white-fiber></app-why-white-fiber>
+
+<div #productsSection><app-manufacture></app-manufacture></div>
+<!-- //why white -->
+<div class="container-fluid pt-5 pb-5 mb-2" style="background-color: #333333">
+  <app-heading
+    [titleText]="'Quality of tissues'"
+    [textColor]="'grey'"
+    [textColor2]="'white'"
+    [titleText2]="'Why White Fiber'"
+  ></app-heading>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="''"
+        [items]="visionItems2"
+        [darkMode]="true"
+      ></app-mission-vision>
+    </div>
+
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="''"
+        [items]="missionItems2"
+        [darkMode]="true"
+      ></app-mission-vision>
+    </div>
+  </div>
+</div>
+<!-- ----- -->
+<app-products></app-products>
+
+<!-- ---------------------- -->
+<div class="container-fluid text-center">
+  <app-heading
+    [titleText]="'Greener Future'"
+    [titleText2]="'Let’s Build a Greener Future Together'"
+  ></app-heading>
+
+  <!-- --------------------- -->
+  <div class="container py-3">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <p class="fs-6 text-muted text-start">
+          At White Fiber, we believe in solutions that don't cost the Earth.
+          From biodegradable disposables to sugarcane bagasse products, every
+          product we ship is a step towards a more sustainable future.
+        </p>
+
+        <p class="fs-6 text-muted text-start">
+          We invite you to join us in our journey towards a more sustainable
+          future. For inquiries, orders, or more information about our products
+          and services, please contact us:
+        </p>
+
+         <p class="fs-6 text-muted text-start">
+          Together, let's make a positive impact on the planet
+        </p>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ----------------------- -->
+
+<app-quality></app-quality>
+
+<app-stat-section></app-stat-section>
+
+<div #exportSection><app-export></app-export></div>
+<div #contactSection><app-footer></app-footer></div>

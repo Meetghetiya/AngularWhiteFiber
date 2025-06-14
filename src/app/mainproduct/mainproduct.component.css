@@ -1,0 +1,125 @@
+.tab-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 2px;
+  background-color: #ebebec;
+  border-radius: 9px;
+  margin: 30px 20px 0px 20px;
+}
+
+.tab {
+  flex: 1 0 auto;
+  min-width: 100px;
+  padding: 6px 12px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  text-align: center;
+  border-radius: 7px;
+  transition: background-color 0.2s ease-out;
+}
+
+.tab.active {
+  background: #fff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
+}
+/* --------------------- */
+.option-list label {
+    margin-left: 8px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.product-display {
+    position: relative;
+}
+
+/* Image + Caption */
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  aspect-ratio: 5 / 3; /* This keeps image ratio 500x300 */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+  .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures it fills the box without distortion */
+    display: block;
+  }
+
+/* .caption {
+    position: absolute;
+    bottom: 10px;
+    width: 70%;
+    padding: 2px 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+} */
+
+.caption {
+    position: absolute;
+    bottom: 25px;
+    width: 70%;
+    padding: 2px 5px;
+    background: linear-gradient(to right, rgba(108, 108, 108, 0.4), rgba(0, 0, 0, 0.8));
+    color: white;
+    font-size: 14px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 1px;
+  }
+
+  .option-label {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    gap: 10px;
+    font-weight: 500;
+  }
+  
+  .option-label input[type="radio"] {
+    accent-color: #333; /* Ensures the dot shows clearly */
+  }
+  
+  .option-label input[type="radio"]:checked {
+    background: linear-gradient(to right, rgba(160, 160, 160, 0.3), rgba(50, 50, 50, 0.5));
+  }
+  
+  .option-label.selected {
+    background: rgb(238, 237, 237);
+  }
+
+  .container-product{
+    background-color:#fdfff5;
+    padding: 3px;
+  }
+
+  .product-name {
+    font-family: 'Poppins', sans-serif; /* You can use Montserrat too */
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 5px;
+    letter-spacing: 2px;
+    color: #111; /* Dark gray/black */
+    text-transform: capitalize; /* Optional if product names aren't already capitalized */
+  }
+
+  .letter{
+    letter-spacing: 1px;
+  }

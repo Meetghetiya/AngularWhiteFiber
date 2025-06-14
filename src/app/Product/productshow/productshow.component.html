@@ -1,0 +1,76 @@
+<div class="container-fluid h-100 pt-5" style="background-color: #fdfff5">
+  <div class="container p-2 mt-5">
+    <div class="row">
+      <!-- Image Slider Column -->
+      <div class="col-12 col-md-6 mb-4">
+        <div class="w-100 overflow-hidden">
+          <!-- Main Swiper -->
+          <swiper-container
+            style="
+              --swiper-navigation-color: #fff;
+              --swiper-pagination-color: #fff;
+            "
+            class="mySwiper"
+            thumbs-swiper=".mySwiper2"
+            space-between="10"
+            navigation="true"
+          >
+            <swiper-slide *ngFor="let img of images">
+              <img
+                [src]="img"
+                class="img-fluid w-100"
+                style="height: 400px; object-fit: cover"
+              />
+            </swiper-slide>
+          </swiper-container> 
+
+          <!-- Thumbnail Swiper -->
+          <swiper-container
+            class="mySwiper2 mt-4"
+            space-between="10"
+            slides-per-view="auto"
+            free-mode="true"
+            watch-slides-progress="true"
+          >
+            <swiper-slide
+              *ngFor="let img of images"
+              class="p-1 d-flex justify-content-center"
+              style="width: 22%"
+            >
+              <img [src]="img" class="img-fluid custom-slide-img rounded" />
+            </swiper-slide>
+          </swiper-container>
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="col-12 col-md-6">
+        <app-heading
+          [textColor]="'grey'"
+          [textColor2]="'black'"
+          [titleText]="titleText"
+          [titleText2]="titleText2"
+        ></app-heading>
+
+        <hr class="my-4" />
+
+        <p class="text-secondary fs-6 text-muted preserve-lines">
+          <!-- Tissue napkin is a type of cloth which is used at the table for wiping
+          the mouth and fingers.
+          <br />
+          It is generally small and folded. Tissue napkins are documented to be
+          first used in ancient China where the paper was invented in 2nd
+          century B.C. They were folded in squares and used for tea serving.
+          <br />
+          A napkin, serviette or face towelette is a square of cloth or paper
+          tissue used at the table for wiping the mouth and fingers while
+          eating. It is usually small and folded, sometimes in intricate designs
+          and shapes. -->
+          {{ description }}
+        </p>
+
+        <hr class="my-4" />
+      </div>
+    </div>
+  </div>
+</div>

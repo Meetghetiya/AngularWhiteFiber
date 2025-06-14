@@ -1,0 +1,39 @@
+.container-fluid{
+    background-color: #fdfff5;
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .paragraph-container {
+    max-width: 800px;
+  }
+
+  .paragraph-container {
+    width: 80%;
+    margin: 20px auto;
+    text-align: justify;
+    line-height: 1.8;
+  }
+  
+  @media (max-width: 992px) {
+    .paragraph-container {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .paragraph-container {
+      width: 90%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .paragraph-container {
+      width: 80%;
+    }
+  }
+
+  .preserve-lines {
+    white-space: pre-line;
+  }

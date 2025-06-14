@@ -1,0 +1,104 @@
+<div class="p-1 m-4 card shadow-sm container-product">
+  <!-- Tab Navigation -->
+  <div class="tab-container">
+    <button
+      class="tab"
+      *ngFor="let tab of tabs; let i = index"
+      [class.active]="selectedTab === i + 1"
+      (click)="selectTab(i + 1)"
+    >
+      {{ tab }}
+    </button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content mt-4">
+    <div class="container d-flex justify-content-start">
+      <div class="col-lg-8 col-md-10">
+        <ng-container [ngSwitch]="selectedTab">
+          <!-- Tissue Paper -->
+          <div *ngSwitchCase="1">
+            <h5 class="product-name">🧻 Tissue Paper Products</h5>
+            <!-- <div class="image-wrapper mb-3">
+              <img src="assets/NapkinTissue/image1.jpg" alt="Tissue Product" />
+              <div class="caption">Soft and Skin-friendly Tissue Range</div>
+            </div> -->
+            <p class="letter">
+              We offer a wide range of soft, absorbent and gentle on the skin tissue products ensuring comfort that are sustainably sourced and safe for daily use.
+            </p>
+            <strong>Product Range:</strong>
+            <ul class="list-unstyled mt-2 ms-3 letter">
+              <li>• Facial tissues</li>
+              <li>• Toilet rolls</li>
+              <li>• Paper napkins</li>
+              <li>• Kitchen rolls</li>
+            </ul>
+            <strong class="mt-2">Sustainability Highlights:</strong>
+            <ul class="list-unstyled letter mt-2 ms-3">
+              <li>• Recycled Content:  <span class="ms-1">Made from recycled or FSC-certified paper.</span></li>
+              <li>• Chlorine-Free:  <span class="ms-1">Processed without harmful bleaching agents.</span></li>
+              <li>• Biodegradable: <span class="ms-1">down naturally, reducing landfill waste.</span> </li>
+            </ul>
+          </div>
+
+          <!-- Bagasse Tableware -->
+          <div *ngSwitchCase="2">
+            <h5 class="product-name">🍽️ Sugarcane Bagasse Tableware</h5>
+            <!-- <div class="image-wrapper mb-3">
+              <img src="assets/NapkinTissue/image2.jpg" alt="Tableware Product" />
+              <div class="caption">Made from Sugarcane Waste</div>
+            </div> -->
+            <p>Our sugarcane bagasse products are a testament to how waste can be repurposed for good.</p>
+            <strong>Range includes:</strong>
+            <ul class="list-unstyled mt-2 ms-3 letter">
+              <li>• Plates (Round, square, compartmentalized)</li>
+              <li>• Bowls (various sizes)</li>
+              <li>• Cups</li>
+              <li>• Meal containers & clamshells</li>
+            </ul>
+            <strong>Key Features:</strong>
+            <ul class="list-unstyled mt-2 ms-3 ">
+              <li>• Eco-Friendly: 100% biodegradable and compostable within 60–90 days.</li>
+              <li>• Durable: Resistant to heat, oil, and moisture.</li>
+              <li>• Microwave and Freezer Safe</li>
+              <li>• Food Safe</li>
+            </ul>
+          </div>
+
+          <!-- Paper Cups -->
+          <div *ngSwitchCase="3">
+            <h5 class="product-name">☕ Biodegradable Paper Cups</h5>
+            <!-- <div class="image-wrapper mb-3">
+              <img src="assets/NapkinTissue/image3.jpg" alt="Paper Cup" />
+              <div class="caption">Serve Hot & Cold with Confidence</div>
+            </div> -->
+            <p>Our paper cups are ideal for hot and cold beverages.</p>
+            <strong>Key Features:</strong>
+            <ul class="list-unstyled mt-2 ms-3 letter">
+              <li>• Plastic-Free</li>
+              <li>• Leak-Proof</li>
+              <li>• Customizable</li>
+            </ul>
+          </div>
+
+          <!-- Paper Bags -->
+          <div *ngSwitchCase="4">
+            <h5 class="product-name">🛍️ Paper Bags</h5>
+            <!-- <div class="image-wrapper mb-3">
+              <img src="assets/NapkinTissue/image1.jpg" alt="Paper Bags" />
+              <div class="caption">Eco-Friendly Shopping Alternative</div>
+            </div> -->
+            <p>Our paper bags are an eco-friendly alternative to plastic bags.</p>
+            <strong>Key Features:</strong>
+            <ul class="list-unstyled mt-2 ms-3 letter">
+              <li>• Sustainable Materials</li>
+              <li>• Eco-Friendly</li>
+              <li>• Custom Printing</li>
+              <li>• Variety of Sizes</li>
+            </ul>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+  </div>
+</div>

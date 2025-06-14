@@ -1,0 +1,144 @@
+<app-navbar></app-navbar>
+<app-heading-image
+  [text]="'contact'"
+  [backgroundImage]="'assets/Contact.jpg'"
+></app-heading-image>
+
+<div class="container py-5">
+    <div class="row justify-content-center align-items-start">
+  
+      <!-- Left: Contact Form -->
+      <div class="col-12 col-lg-6 mb-5 mb-lg-0">
+        <div class="border p-4 p-md-5 shadow-sm">
+          <div class="mb-2">
+            <app-heading [titleText]="'Stay connected'"></app-heading>
+          </div>
+          <h2 class="fw-bold display-6">Get in Touch</h2>
+  
+          <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="mt-4">
+            <!-- Name -->
+            <div class="mb-4">
+              <label class="form-label text-success fw-medium">Your name *</label>
+              <input
+                type="text"
+                class="form-control border-0 border-bottom rounded-0 bg-transparent"
+                name="name"
+                ngModel
+                required
+                #name="ngModel"
+                [class.is-invalid]="name.invalid && name.touched"
+              />
+              <div *ngIf="name.invalid && name.touched" class="text-danger small mt-1">
+                Name is required.
+              </div>
+            </div>
+  
+            <!-- Email -->
+            <div class="mb-4">
+              <label class="form-label text-success fw-medium">Your E-Mail *</label>
+              <input
+                type="email"
+                class="form-control border-0 border-bottom rounded-0 bg-transparent"
+                name="email"
+                ngModel
+                required
+                email
+                #email="ngModel"
+                [class.is-invalid]="email.invalid && email.touched"
+              />
+              <div *ngIf="email.invalid && email.touched" class="text-danger small mt-1">
+                <div *ngIf="email.errors?.['required']">Email is required.</div>
+                <div *ngIf="email.errors?.['email']">Enter a valid email.</div>
+              </div>
+            </div>
+  
+            <!-- Phone -->
+            <div class="mb-4">
+              <label class="form-label text-success fw-medium">Your Phone no. *</label>
+              <input
+                type="tel"
+                class="form-control border-0 border-bottom rounded-0 bg-transparent"
+                name="phone"
+                ngModel
+                required
+                pattern="^[0-9]{10}$"
+                #phone="ngModel"
+                [class.is-invalid]="phone.invalid && phone.touched"
+              />
+              <div *ngIf="phone.invalid && phone.touched" class="text-danger small mt-1">
+                <div *ngIf="phone.errors?.['required']">Phone number is required.</div>
+                <div *ngIf="phone.errors?.['pattern']">Enter a valid 10-digit phone number.</div>
+              </div>
+            </div>
+  
+            <!-- Message -->
+            <div class="mb-2">
+              <label class="form-label text-success fw-medium">Message</label>
+              <textarea
+                class="form-control border-0 border-bottom rounded-0 bg-transparent"
+                [(ngModel)]="message"
+                name="message"
+                maxlength="350"
+                rows="3"
+              ></textarea>
+            </div>
+  
+            <!-- Character Counter -->
+            <div class="text-muted small mb-3">
+              {{ 350 - (message?.length || 0) }} Character(s) Remaining
+            </div>
+  
+            <!-- Submit -->
+            <div class="text-start">
+              <button
+                type="submit"
+                class="btn btn-outline-dark px-4 py-2"
+                [disabled]="!contactForm.valid"
+              >
+                SEND MESSAGE
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <!-- Right: Contact Info -->
+      <div class="col-12 col-lg-6 d-flex align-items-center tight-text" style="margin-top: 180px;">
+        <div class="px-lg-5">
+          <div class="mb-4">
+            <h5 class="fw-bold">Contact</h5>
+            <p class="mb-1 text-muted">
+              +91 97279 74539 <span class="text-secondary"></span>
+            </p>
+            <p class="mb-3 text-muted">
+              +91 99790 27910 <span class="text-secondary"></span>
+            </p>
+  
+            <!-- <p class="mb-1">
+              <strong>Sales:</strong>
+              <a href="mailto:sales@kempttissues.com" class="text-dark text-decoration-none">sales@kempttissues.com</a>
+            </p>
+            <p class="mb-1">
+              <strong>Purchase:</strong>
+              <a href="mailto:purchase@kempttissues.com" class="text-dark text-decoration-none">purchase@kempttissues.com</a>
+            </p> -->
+            <p class="mb-1">
+              <strong>Email:</strong>
+              <a  class="text-dark text-decoration-none"> shreewhitefiber@gmail.com</a>
+            </p>
+          </div>
+  
+          <div>
+            <h5 class="fw-bold">Address</h5>
+            <address class="text-muted">
+              Gujarat, India<br />
+            </address>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </div>
+  
+  
+<app-footer></app-footer>

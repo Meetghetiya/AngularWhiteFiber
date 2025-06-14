@@ -1,0 +1,26 @@
+swiper-container {
+    width: 100%;
+  }
+  
+  swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  
+  .swiper-img {
+    width: 100%;
+    height: auto;
+    max-height: 70vh; /* Keeps it within viewport */
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Optional: Adjust for smaller screens */
+  @media (max-width: 768px) {
+    .swiper-img {
+      max-height: 50vh;
+    }
+  }
+  

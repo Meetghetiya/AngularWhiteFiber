@@ -1,0 +1,189 @@
+/* Background section styling */
+.export-section {
+    background: url('/assets/Export.jpg') center center / cover no-repeat;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .export-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+  }
+  
+  .export-section > div {
+    position: relative;
+    z-index: 2;
+  }
+  
+  /* Home Link */
+  .nav-link-custom {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: 1px;
+  }
+  
+  /* EXPORT full bordered box */
+  .export-box {
+    display: inline-block;
+    padding: 8px 36px;
+    position: relative;
+  }
+  
+  .export-text {
+    color: white;
+    font-weight: 400;
+    letter-spacing: 5px;
+    position: relative;
+  }
+  
+  /* Border all 4 sides */
+  .export-box::before,
+  .export-box::after,
+  .export-text::before,
+  .export-text::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+  }
+  
+  /* Top and bottom lines */
+  .export-box::before {
+    top:5px;
+    left: 17px;
+    height: 1.5px;
+    width: 80%;
+  }
+  
+  .export-box::after {
+    bottom: 5px;
+    left: 17px;
+    height: 1.5px;
+    width: 80%;
+
+  }
+  
+  /* Left and right lines */
+  .export-text::before {
+    top: 0;
+    width: 1.5px;
+    left: -7px; 
+    height: 100%;
+  }
+  
+  .export-text::after {
+    top: 0;
+    right: -10px;
+    width:1.5px;
+    height: 100%;
+  }
+
+  /* Default (Desktop) */
+.export-box::before {
+  top: 5px;
+  left: 17px;
+  height: 1.5px;
+  width: 80%;
+}
+
+.export-box::after {
+  bottom: 5px;
+  left: 17px;
+  height: 1.5px;
+  width: 80%;
+}
+
+.export-text::before {
+  top: 0;
+  width: 1.5px;
+  left: -7px;
+  height: 100%;
+}
+
+.export-text::after {
+  top: 0;
+  right: -10px;
+  width: 1.5px;
+  height: 100%;
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .export-box::before,
+  .export-box::after {
+    left: 13px;
+    width: 80%;
+  }
+
+  .export-text::before {
+    left: -5px;
+  }
+
+  .export-text::after {
+    right: -7px;
+  }
+}
+
+/* Mobile (≤ 576px) */
+@media (max-width: 576px) {
+  .export-box::before,
+  .export-box::after {
+    left: 9px;
+    width: 80%;
+  }
+
+  .export-text::before {
+    left: -4px;
+  }
+
+  .export-text::after {
+    right: -4px;
+  }
+}
+
+
+  @media (max-width: 768px) {
+    .export-section {
+      height: 80vh;
+    }
+  
+    .display-4 {
+      font-size: 2rem;
+    }
+  
+    .export-box {
+      padding: 6px 24px;
+    }
+  
+    .export-text {
+      font-size: 1rem;
+      letter-spacing: 3px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .export-section {
+      height: 60vh;
+    }
+  
+    .display-4 {
+      font-size: 1.5rem;
+    }
+  
+    .export-box {
+      padding: 4px 18px;
+    }
+  
+    .export-text {
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+    }
+  }
+
+  .Home {
+    margin-top: 4px; /* Default for large screens */
+  }
+  

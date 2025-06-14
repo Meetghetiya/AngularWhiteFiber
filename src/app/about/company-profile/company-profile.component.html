@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+<app-heading-image
+  [text]="'Company Profile'"
+  [backgroundImage]="'assets/Profile.jpg'"
+></app-heading-image>
+<!-- <app-productshow
+  [titleText]="'White Fiber Tissues'"
+  [titleText2]="'Kitchen Tissue'"
+  [description]="productDescription"
+  [images]="productImages"
+></app-productshow> -->
+<div class="container-fluid text-center">
+  <app-heading
+    [titleText]="'About White Fiber Tissues'"
+    [titleText2]="'Welcome to White Fiber Tissues.'"
+  ></app-heading>
+
+  <!-- Paragraph -->
+  <div class="paragraph-container mx-auto mt-3">
+    <p class="text-muted mt-3 fs-6 preserve-lines">
+      Established with a vision to become a leader in the tissue and
+      specialty paper industry, White Fiber is strategically located
+      to serve a broad clientele. The company specializes in
+      producing tissue paper and other specialty grades, utilizing
+      advanced machinery sourced from reputable manufacturers. This ensures
+      that every product meets stringent quality standards, reflecting the company's dedication to excellence.
+
+      White Fiber is a premier manufacturer of high-quality tissue and
+      specialty paper products. With a state-of-the-art manufacturing facility and 
+      a commitment to innovation, we offer a diverse range of tissue
+      products designed to meet the varied needs of consumers and
+      businesses worldwide. Our focus on quality, sustainability,
+      and customer satisfaction sets us apart in the industry.
+    </p>
+  </div>
+</div>
+
+<div class="container-fluid pt-5 pb-5 mb-2" style="background-color: #333333">
+  <app-heading
+    [titleText]="'Quality of tissues'"
+    [textColor]="'grey'"
+    [textColor2]="'white'"
+    [titleText2]="'Why White Fiber Tissues'"
+  ></app-heading>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="''"
+        [items]="visionItems"
+        [darkMode]="true"
+      ></app-mission-vision>
+    </div>
+
+    <div class="col-md-6">
+      <app-mission-vision
+        [title]="''"
+        [items]="missionItems"
+        [darkMode]="true"
+      ></app-mission-vision>
+    </div>
+  </div>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,48 @@
+<!-- <div class="text-center my-5">
+  <div class="title-container">
+    <span class="title-bg"></span>
+    <span class="title-text">Core Kempt Tissues</span>
+    <span class="title-line"></span>
+  </div>
+  <h2 class="fw-bold mt-2">Mission & Vision</h2>
+</div> -->
+
+<!-- <div class="title-wrapper">
+  <div class="title-container">
+    <span class="title-bg"></span>
+    <span class="title-text">Core Kempt Tissues</span>
+    <span class="title-line"></span>
+  </div>
+    <h2 class="fw-bold mt-2">Mission & Vision</h2>
+</div> -->
+
+<!-- ------------------------------ -->
+<div class="p-4 rounded">
+  <h2
+    class="tight-text fw-semibold fs-5 ms-3"
+    [ngClass]="{ 'text-white': darkMode, 'text-dark': !darkMode }"
+  >
+    {{ title }}
+  </h2>
+  <div class="timeline mt-4">
+    <div *ngFor="let item of items" class="timeline-item mb-4">
+      <div class="d-flex">
+        <span class="dot me-2"></span>
+        <span
+          class="fs-6 tight-text fw-semibold"
+          [ngClass]="{ 'text-white': darkMode, 'text-dark': !darkMode }"
+          style="margin-top: 2px"
+        >
+          {{ item.heading }}
+        </span>
+      </div>
+      <p
+        class="ms-1 mt-3 pe-3"
+        [ngStyle]="{ color: darkMode ? '#ccc' : '#555' }"
+        style="font-size: 15px; font-weight: 600"
+      >
+        {{ item.description }}
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container-product">
+  <app-heading
+    [titleText]="'Products White Fiber Tissues'"
+    [titleText2]="'Hygienic Germ-Free Tissues Are Better For Us'"
+  ></app-heading>
+  <div class="container py-4">
+    <div class="row">
+      <!-- Left Side Options -->
+      <div class="col-12 col-md-6 mb-4">
+        <div class="option-list">
+          <!-- <div *ngFor="let product of products">
+
+            <input
+              type="radio"
+              name="product"
+              [id]="product.name"
+              [value]="product.name"
+              [(ngModel)]="selectedProduct"
+              (change)="onProductChange(product)"
+            />
+            <label [for]="product.name">{{ product.name }}</label>
+          </div> -->
+          <div *ngFor="let product of products">
+            <label
+              class="option-label"
+              [class.selected]="selectedProduct?.name === product.name"
+            >
+              <input
+                type="radio"
+                name="product"
+                [value]="product"
+                [(ngModel)]="selectedProduct"
+              />
+              <span class="product-name">{{ product.name }}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side Image Display -->
+      <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+        <div class="product-display">
+          <div class="image-wrapper">
+            <img [src]="selectedProduct?.image" alt="Product image" />
+            <div class="caption text-start px-3">
+              {{ selectedProduct?.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</div>
