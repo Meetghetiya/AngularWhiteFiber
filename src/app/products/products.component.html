@@ -22,7 +22,7 @@
           </div> -->
           <div *ngFor="let product of products">
             <label
-              class="option-label"
+              class="option-label p-1 ps-3"
               [class.selected]="selectedProduct?.name === product.name"
             >
               <input
@@ -38,7 +38,7 @@
       </div>
 
       <!-- Right Side Image Display -->
-      <div class="col-12 col-md-6 mb-4 d-flex justify-content-center">
+      <div class="col-12 col-md-6 mb-4 d-flex justify-content-center" style="margin-top: 100px;">
         <div class="product-display">
           <div class="image-wrapper">
             <img [src]="selectedProduct?.image" alt="Product image" />

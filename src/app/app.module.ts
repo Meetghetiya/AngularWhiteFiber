@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -17,7 +17,7 @@ import { FooterComponent } from './footer/footer.component';
 import { ManufactureComponent } from './manufacture/manufacture.component';
 import { StatSectionComponent } from './stat-section/stat-section.component';
 import { Slider2Component } from './slider2/slider2.component';
-import Swiper from 'swiper';
+// import Swiper from 'swiper';
 import { CountrySliderComponent } from './country-slider/country-slider.component';
 import { HeadingImageComponent } from './heading-image/heading-image.component';
 import { NapkinTissueComponent } from './Product/napkin-tissue/napkin-tissue.component';
@@ -34,6 +34,8 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ContactComponent } from './contact/contact.component';
 import { QualityComponent } from './quality/quality.component';
 import { MainproductComponent } from './mainproduct/mainproduct.component';
+import { FeederComponent } from './feeder/feeder.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -66,15 +68,13 @@ import { MainproductComponent } from './mainproduct/mainproduct.component';
     CatalogueComponent,
     ContactComponent,
     QualityComponent,
-    MainproductComponent
+    MainproductComponent,
+    FeederComponent
+  
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class AppModule { }
+export class AppModule {}

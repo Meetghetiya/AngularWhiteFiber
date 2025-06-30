@@ -35,13 +35,13 @@
 .menu-container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 7px;
 }
 
 .menu-text {
   font-family: "Arial", sans-serif;
   /* Adjust font to match the image */
-  font-weight: 600;
+  font-weight: 300;
   font-size: 18px;
   color: black;
 }

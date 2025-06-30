@@ -8,9 +8,9 @@ import gsap from 'gsap';
 })
 export class SliderComponent {
   images = [
-    'assets/Home.jpg',
-    'assets/Home2.jpg',
-    'assets/Home3.jpg'
+    'assets/banner/banner_5.webp',
+    'assets/banner/slider-home_003.jpg',
+    'assets/banner/slider.jpeg'
   ];
 
   currentSlide = 0;

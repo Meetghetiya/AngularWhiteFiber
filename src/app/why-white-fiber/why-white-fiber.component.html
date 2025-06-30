@@ -2,151 +2,957 @@
   <app-heading
     [textColor]="'grey'"
     [textColor2]="'white'"
-    [titleText]="'Why White Fiber Tissues'"
-    [titleText2]="'The Most Stylish, Hygienic & Soft Tissues'"
+    [titleText]="'Products'"
+    [titleText2]="'Products of White Fiber'"
   ></app-heading>
-  <div class="row px-3 px-md-5 mt-1">
-    <div
-      class="col-12 col-md-6 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
-    >
-      <div class="kempt-border text-center position-relative p-4">
-        <!-- Top right header -->
-        <div
-          class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
-        >
-          Why White Fiber Tissues?
-        </div>
 
-        <!-- Centered image -->
-        <div class="kempt-inner-box my-4 ">
-          <img
-            src="assets/Whykmpt1.jpg"
-            class="img-fluid"
-            alt="Kempt Tissue Design"
-          />
-        </div>
+  <div class="tab-wrapper">
+    <!-- Left Navigation Button -->
+    <button class="tab-nav-btn left-nav" (click)="scrollTabs('left')">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 18L9 12L15 6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
 
-        <!-- Bottom caption -->
-        <div
-          class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
-        >
-          White Fiber new design
-        </div>
-
-        <!-- Corner lines -->
-        <div class="line top-line"></div>
-        <div class="line bottom-line"></div>
-        <div class="line left-line"></div>
-        <div class="line right-line"></div>
-      </div>
+    <!-- Tab Container -->
+    <div class="tab-container" #tabContainer (scroll)="onScroll()">
+      <button
+        class="tab"
+        *ngFor="let tab of tabs; let i = index"
+        [class.active]="selectedTab === i + 1"
+        (click)="selectTab(i + 1)"
+      >
+        {{ tab }}
+      </button>
     </div>
 
-    <div
-      class="col-12 col-md-6 kempt-frame d-flex align-items-center justify-content-center min-vh-md-100 text-white mt-3"
-    >
-      <div class="kempt-border text-center position-relative p-4">
-        <!-- Top right header -->
-        <div
-          class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
-        >
-          Why White Fiber Tissues?
-        </div>
-
-        <!-- Centered image -->
-        <div class="kempt-inner-box my-4">
-          <img
-            src="assets/Whykempt2.jpg"
-            class="img-fluid"
-            alt="Kempt Tissue Design"
-          />
-        </div>
-
-        <!-- Bottom caption -->
-        <div
-          class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
-        >
-          White Fiber new design
-        </div>
-
-        <!-- Corner lines -->
-        <div class="line top-line"></div>
-        <div class="line bottom-line"></div>
-        <div class="line left-line"></div>
-        <div class="line right-line"></div>
-      </div>
-    </div>
+    <!-- Right Navigation Button -->
+    <button class="tab-nav-btn right-nav" (click)="scrollTabs('right')">
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M9 18L15 12L9 6"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
   </div>
-  <div class="row px-3 px-md-5 mt-1">
-    <div
-      class="col-12 col-md-6 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
-    >
-      <div class="kempt-border text-center position-relative p-4">
-        <!-- Top right header -->
+
+  <div class="tab-content-wrapper">
+    <div *ngIf="selectedTab === 1" @slideAnimation class="tab-panel">
+      <div class="row px-3 px-md-5 mt-1">
         <div
-          class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+          class="col-12 col-md-12 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
         >
-          Why White Fiber Tissues?
-        </div>
+          <div class="kempt-border text-center position-relative p-4">
+            <!-- Top right header -->
+            <div
+              class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+            >
+              <!-- Why White Fiber Tissues? -->
+            </div>
 
-        <!-- Centered image -->
-        <div class="kempt-inner-box my-4">
-          <img
-            src="assets/Whykempt3.jpg"
-            class="img-fluid"
-            alt="Kempt Tissue Design"
-          />
-        </div>
+            <!-- Centered image -->
+            <div class="kempt-inner-box my-4">
+              <img
+                src="assets/Products/Tissuepaper.jpg"
+                class="img-fluid"
+                alt="Kempt Tissue Design"
+              />
+            </div>
 
-        <!-- Bottom caption -->
-        <div
-          class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
-        >
-          White Fiber new design
-        </div>
+            <!-- Bottom caption -->
+            <div
+              class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
+            >
+              ''
+            </div>
 
-        <!-- Corner lines -->
-        <div class="line top-line"></div>
-        <div class="line bottom-line"></div>
-        <div class="line left-line"></div>
-        <div class="line right-line"></div>
+            <!-- Corner lines -->
+            <div class="line top-line"></div>
+            <div class="line bottom-line"></div>
+            <div class="line left-line"></div>
+            <div class="line right-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-3 custom-margin-lg">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+            <div class="product-range-card h-100">
+              <div class="card-header-custom">
+                <div class="icon-wrapper">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L2 7L12 12L22 7L12 2Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 17L12 22L22 17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 12L12 17L22 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="section-title">Product Range</h3>
+              </div>
+              <div class="card-body-custom">
+                <div class="product-grid">
+                  <div
+                    class="product-item"
+                    *ngFor="let product of productRange"
+                  >
+                    <div class="product-icon">
+                      <div class="icon-circle">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M12 1V3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M12 21V23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M4.22 4.22L5.64 5.64"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M18.36 18.36L19.78 19.78"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M1 12H3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M21 12H23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M4.22 19.78L5.64 18.36"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M18.36 5.64L19.78 4.22"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span class="product-name">{{ product }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------/ -->
+
+          <div class="col-12 col-lg-6">
+            <div class="sustainability-card h-100">
+              <div class="card-header-custom">
+                <div class="icon-wrapper sustainability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L13.09 8.26L22 9L13.09 9.74L12 22L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="section-title">Key Features</h3>
+              </div>
+              <div class="card-body-custom">
+                <div class="sustainability-grid">
+                  <div
+                    class="sustainability-item"
+                    *ngFor="let item of sustainabilityHighlights"
+                  >
+                    <div class="sustainability-header">
+                      <div class="sustainability-icon-small">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M22 11.08V12A10 10 0 1 1 5.93 2.85"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M22 4L12 14.01L9 11.01"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <h4 class="sustainability-title">{{ item.title }}</h4>
+                    </div>
+                    <p class="sustainability-description">
+                      {{ item.description }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
-    <div
-      class="col-12 col-md-6 kempt-frame d-flex align-items-center justify-content-center min-vh-md-100 text-white mt-3"
-    >
-      <div class="kempt-border text-center position-relative p-4">
-        <!-- Top right header -->
+    <div *ngIf="selectedTab === 2" @slideAnimation class="tab-panel">
+      <div class="row px-3 px-md-5 mt-1">
         <div
-          class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+          class="col-12 col-md-12 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
         >
-          Why White Fiber Tissues?
-        </div>
+          <div class="kempt-border text-center position-relative p-4">
+            <!-- Top right header -->
+            <div
+              class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+            >
+              <!-- Why White Fiber Tissues? -->
+            </div>
 
-        <!-- Centered image -->
-        <div class="kempt-inner-box my-4">
-          <img
-            src="assets/Whykempt4.jpg"
-            class="img-fluid"
-            alt="Kempt Tissue Design"
-          />
-        </div>
+            <!-- Centered image -->
+            <div class="kempt-inner-box my-4">
+              <img
+                src="assets/Products/tableware.jpg"
+                class="img-fluid"
+                alt="Kempt Tissue Design"
+              />
+            </div>
 
-        <!-- Bottom caption -->
+            <!-- Bottom caption -->
+            <div
+              class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
+            >
+              ''
+            </div>
+
+            <!-- Corner lines -->
+            <div class="line top-line"></div>
+            <div class="line bottom-line"></div>
+            <div class="line left-line"></div>
+            <div class="line right-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-3 custom-margin-lg">
+        <div class="row">
+          <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+            <div class="product-range-card h-100">
+              <div class="card-header-custom">
+                <div class="icon-wrapper">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L2 7L12 12L22 7L12 2Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 17L12 22L22 17"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 12L12 17L22 12"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="section-title">Product Range</h3>
+              </div>
+              <div class="card-body-custom">
+                <div class="product-grid">
+                  <div
+                    class="product-item"
+                    *ngFor="let product of productRange2"
+                  >
+                    <div class="product-icon">
+                      <div class="icon-circle">
+                        <svg
+                          width="20"
+                          height="20"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <circle
+                            cx="12"
+                            cy="12"
+                            r="3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                          />
+                          <path
+                            d="M12 1V3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M12 21V23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M4.22 4.22L5.64 5.64"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M18.36 18.36L19.78 19.78"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M1 12H3"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M21 12H23"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M4.22 19.78L5.64 18.36"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                          <path
+                            d="M18.36 5.64L19.78 4.22"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    <span class="product-name">{{ product }}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- -------------------/ -->
+
+          <div class="col-12 col-lg-6">
+            <div class="sustainability-card h-100">
+              <div class="card-header-custom">
+                <div class="icon-wrapper sustainability-icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 2L13.09 8.26L22 9L13.09 9.74L12 22L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <h3 class="section-title">Sustainability Highlights</h3>
+              </div>
+              <div class="card-body-custom">
+                <div class="sustainability-grid">
+                  <div
+                    class="sustainability-item"
+                    *ngFor="let item of sustainabilityHighlights2"
+                  >
+                    <div class="sustainability-header">
+                      <div class="sustainability-icon-small">
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M22 11.08V12A10 10 0 1 1 5.93 2.85"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                          <path
+                            d="M22 4L12 14.01L9 11.01"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </div>
+                      <h4 class="sustainability-title">{{ item.title }}</h4>
+                    </div>
+                    <p class="sustainability-description">
+                      {{ item.description }}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTab === 3" @slideAnimation class="tab-panel">
+      <div class="row px-3 px-md-5 mt-1">
         <div
-          class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
+          class="col-12 col-md-12 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
         >
-          White Fiber new design
-        </div>
+          <div class="kempt-border text-center position-relative p-4">
+            <!-- Top right header -->
+            <div
+              class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+            >
+              <!-- Why White Fiber Tissues? -->
+            </div>
 
-        <!-- Corner lines -->
-        <div class="line top-line"></div>
-        <div class="line bottom-line"></div>
-        <div class="line left-line"></div>
-        <div class="line right-line"></div>
+            <!-- Centered image -->
+            <div class="kempt-inner-box my-4">
+              <img
+                src="assets/Products/Papercups.jpg"
+                class="img-fluid"
+                alt="Kempt Tissue Design"
+              />
+            </div>
+
+            <!-- Bottom caption -->
+            <div
+              class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
+            >
+              ''
+            </div>
+
+            <!-- Corner lines -->
+            <div class="line top-line"></div>
+            <div class="line bottom-line"></div>
+            <div class="line left-line"></div>
+            <div class="line right-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-3 custom-margin-lg">
+        <div class="row">
+          <!-- <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div class="product-range-card h-100">
+            <div class="card-header-custom">
+              <div class="icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="section-title">Product Range</h3>
+            </div>
+            <div class="card-body-custom">
+              <div class="product-grid">
+                <div class="product-item" *ngFor="let product of productRange">
+                  <div class="product-icon">
+                    <div class="icon-circle">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M12 1V3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M12 21V23"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.22 4.22L5.64 5.64"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.36 18.36L19.78 19.78"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M1 12H3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M21 12H23"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.22 19.78L5.64 18.36"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.36 5.64L19.78 4.22"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="product-name">{{ product }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+          <!-- -------------------/ -->
+          <div class="d-flex justify-content-center">
+            <div class="col-12 col-lg-6">
+              <div class="sustainability-card h-100">
+                <div class="card-header-custom">
+                  <div class="icon-wrapper sustainability-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2L13.09 8.26L22 9L13.09 9.74L12 22L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="section-title">Sustainability Highlights</h3>
+                </div>
+                <div class="card-body-custom">
+                  <div class="sustainability-grid">
+                    <div
+                      class="sustainability-item"
+                      *ngFor="let item of sustainabilityHighlights3"
+                    >
+                      <div class="sustainability-header">
+                        <div class="sustainability-icon-small">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 11.08V12A10 10 0 1 1 5.93 2.85"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M22 4L12 14.01L9 11.01"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h4 class="sustainability-title">{{ item.title }}</h4>
+                      </div>
+                      <p class="sustainability-description">
+                        {{ item.description }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="selectedTab === 4" @slideAnimation class="tab-panel">
+      <div class="row px-3 px-md-5 mt-1">
+        <div
+          class="col-12 col-md-12 kempt-frame d-flex align-items-center justify-content-center py-5 py-md-0 mt-3 min-vh-md-100 text-white"
+        >
+          <div class="kempt-border text-center position-relative p-4">
+            <!-- Top right header -->
+            <div
+              class="tight-text kempt-top-text position-absolute top-0 end-0 pe-4 pt-3 text-uppercase small"
+            >
+              <!-- Why White Fiber Tissues? -->
+            </div>
+
+            <!-- Centered image -->
+            <div class="kempt-inner-box my-4">
+              <img
+                src="assets/Products/Paperbags.jpg"
+                class="img-fluid"
+                alt="Kempt Tissue Design"
+              />
+            </div>
+
+            <!-- Bottom caption -->
+            <div
+              class="tight-text kempt-bottom-text text-white text-center fw-bold align-items-start d-flex ms-3"
+            >
+              ''
+            </div>
+
+            <!-- Corner lines -->
+            <div class="line top-line"></div>
+            <div class="line bottom-line"></div>
+            <div class="line left-line"></div>
+            <div class="line right-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="px-3 custom-margin-lg">
+        <div class="row">
+          <!-- <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+          <div class="product-range-card h-100">
+            <div class="card-header-custom">
+              <div class="icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <h3 class="section-title">Product Range</h3>
+            </div>
+            <div class="card-body-custom">
+              <div class="product-grid">
+                <div class="product-item" *ngFor="let product of productRange">
+                  <div class="product-icon">
+                    <div class="icon-circle">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M12 1V3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M12 21V23"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.22 4.22L5.64 5.64"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.36 18.36L19.78 19.78"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M1 12H3"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M21 12H23"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M4.22 19.78L5.64 18.36"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M18.36 5.64L19.78 4.22"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                  <span class="product-name">{{ product }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+          <!-- -------------------/ -->
+          <div class="d-flex justify-content-center">
+            <div class="col-12 col-lg-6">
+              <div class="sustainability-card h-100">
+                <div class="card-header-custom">
+                  <div class="icon-wrapper sustainability-icon">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12 2L13.09 8.26L22 9L13.09 9.74L12 22L10.91 9.74L2 9L10.91 8.26L12 2Z"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <h3 class="section-title">Sustainability Highlights</h3>
+                </div>
+                <div class="card-body-custom">
+                  <div class="sustainability-grid">
+                    <div
+                      class="sustainability-item"
+                      *ngFor="let item of sustainabilityHighlights4"
+                    >
+                      <div class="sustainability-header">
+                        <div class="sustainability-icon-small">
+                          <svg
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              d="M22 11.08V12A10 10 0 1 1 5.93 2.85"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                            <path
+                              d="M22 4L12 14.01L9 11.01"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                            />
+                          </svg>
+                        </div>
+                        <h4 class="sustainability-title">{{ item.title }}</h4>
+                      </div>
+                      <p class="sustainability-description">
+                        {{ item.description }}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- kempt.component.html -->

@@ -11,6 +11,7 @@ import { InfrastructureComponent } from './about/infrastructure/infrastructure.c
 import { CertificatesComponent } from './about/certificates/certificates.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { ContactComponent } from './contact/contact.component';
+import { FeederComponent } from './feeder/feeder.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'infrastructure', component: InfrastructureComponent },
   { path: 'certificates', component: CertificatesComponent },
   { path: 'catalogue', component: CatalogueComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'contact', component: ContactComponent },
+  { path: 'feeder', component: FeederComponent }
 ];
 
 @NgModule({

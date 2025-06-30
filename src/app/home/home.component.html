@@ -111,13 +111,18 @@
     </div>
   </div>
 </div>
-<app-why-white-fiber></app-why-white-fiber>
 
-<div #productsSection><app-manufacture></app-manufacture></div>
+<!-- -----------product------------- -->
+<div #productsSection>
+  <app-why-white-fiber></app-why-white-fiber>
+</div>
+
+<!-- <div #productsSection><app-manufacture></app-manufacture></div> -->
+<app-products></app-products>
 <!-- //why white -->
 <div class="container-fluid pt-5 pb-5 mb-2" style="background-color: #333333">
   <app-heading
-    [titleText]="'Quality of tissues'"
+    [titleText]="'Why White Fiber'"
     [textColor]="'grey'"
     [textColor2]="'white'"
     [titleText2]="'Why White Fiber'"
@@ -142,39 +147,71 @@
   </div>
 </div>
 <!-- ----- -->
-<app-products></app-products>
 
 <!-- ---------------------- -->
-<div class="container-fluid text-center">
-  <app-heading
-    [titleText]="'Greener Future'"
-    [titleText2]="'Let’s Build a Greener Future Together'"
-  ></app-heading>
+<div
+  class="container-fluid text-center position-relative"
+  [ngStyle]="{
+    'background-image': 'url(' + backgroundImageUrl + ')',
+    'background-size': 'cover',
+    'background-position': 'center',
+    'background-repeat': 'no-repeat'
+  }"
+>
+  <div
+    class="position-relative py-5 d-flex justify-content-center align-items-center min-vh-100"
+  >
+    <!-- Blurred Glass Effect Container -->
+    <div
+      class="blur-content p-5 rounded-4 text-white"
+      style="
+        background: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 1;
+        max-width: 900px;
+        width: 100%;
+      "
+    >
+      <app-heading
+        [titleText]="'Greener Future'"
+        [titleText2]="'Let’s Build a Greener Future Together'"
+      ></app-heading>
 
-  <!-- --------------------- -->
-  <div class="container py-3">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <p class="fs-6 text-muted text-start">
-          At White Fiber, we believe in solutions that don't cost the Earth.
-          From biodegradable disposables to sugarcane bagasse products, every
-          product we ship is a step towards a more sustainable future.
-        </p>
+      <p class="fs-5 fw-semibold text-start mb-3">
+        <span class="text-success">At White Fiber</span>, we believe in
+        solutions that don’t cost the Earth.
+      </p>
 
-        <p class="fs-6 text-muted text-start">
-          We invite you to join us in our journey towards a more sustainable
-          future. For inquiries, orders, or more information about our products
-          and services, please contact us:
-        </p>
+      <p class="fs-5 fw-semibold text-start">
+        From
+        <span class="fw-semibold text-white">biodegradable disposables</span> to
+        <span class="fw-semibold text-white">sugarcane bagasse products</span>,
+        every product we ship is a
+        <span class="text-info fw-semibold"
+          >step toward a sustainable future</span
+        >.
+      </p>
 
-         <p class="fs-6 text-muted text-start">
-          Together, let's make a positive impact on the planet
-        </p>
-        
-      </div>
+      <p class="fs-5 fw-light text-start mb-3">
+        Join us in shaping a better tomorrow. Whether you're a
+        <span class="fw-semibold text-white">business going green</span> or a
+        <span class="fw-semibold text-white">conscious consumer</span>, we’re
+        here to help.
+      </p>
+
+      <p class="fs-5 fw-light text-start mb-3">
+        ✉️ Reach out today to explore our
+        <span class="text-warning fw-semibold">eco-friendly range</span>!
+      </p>
+
+      <p class="fs-5 fw-semibold text-start text-success">
+        🌿 Together, let's make a <u>positive impact on the planet</u>.
+      </p>
     </div>
   </div>
 </div>
+
 <!-- ----------------------- -->
 
 <app-quality></app-quality>
@@ -182,4 +219,7 @@
 <app-stat-section></app-stat-section>
 
 <div #exportSection><app-export></app-export></div>
-<div #contactSection><app-footer></app-footer></div>
+
+<div #contactSection><app-contact></app-contact></div>
+
+<app-footer></app-footer>

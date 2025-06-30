@@ -1,0 +1,31 @@
+<div class="table-responsive">
+  <table class="table table-bordered table-striped">
+    <thead class="table-dark">
+      <tr>
+        <th>Feeder Type</th>
+        <th>ON</th>
+        <th>TF</th>
+        <th>SF</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <tr *ngFor="let row of resultArray">
+        <td>{{ row.feedertype }}</td>
+        <td>{{ row.on }}</td>
+        <td>{{ row.tf }}</td>
+        <td>{{ row.sf }}</td>
+        <td>{{ row.instatus }}</td>
+      </tr> -->
+      <ng-container *ngFor="let ft of allFeederTypes">
+        <tr *ngIf="ft !== 'Distributer'">
+          <td>{{ ft }}</td>
+          <td>{{ result[ft]?.on || 0 }}</td>
+          <td>{{ result[ft]?.tf || 0 }}</td>
+          <td>{{ result[ft]?.sf || 0 }}</td>
+          <td>{{ result[ft]?.instatus || " " }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+</div>

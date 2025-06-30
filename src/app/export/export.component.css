@@ -1,6 +1,34 @@
 
  
-  
+  .container-fluid {
+  position: relative;
+  background-color: #fdfff5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.container-fluid::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('/assets/export/export.jpg'); /* replace with your image path */
+  background-size: cover;
+  background-position: center;
+  filter: blur(8px);
+  z-index: -1;
+  opacity: 1;
+}
+
+
 
   /* ---------------------------- */
   .section-subtitle {

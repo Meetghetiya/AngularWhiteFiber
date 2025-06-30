@@ -110,4 +110,6 @@ export class HomeComponent {
         break;
     }
   }
+
+  backgroundImageUrl = 'assets/greenerfuture/sliderimg3.jpg';
 }
