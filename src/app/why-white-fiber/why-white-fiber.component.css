@@ -1,6 +1,4 @@
-/*  */
 
-/* Global Styles */
 .container-fluid {
   background-color: #333333;
   padding: 1rem;
@@ -30,20 +28,7 @@ img {
   /* Cap width for larger screens */
 }
 
-/* Top Text */
-.kempt-top-text {
-  font-size: 0.8rem;
-  color: #ccc;
-  text-transform: uppercase;
-}
 
-/* Bottom Text */
-.kempt-bottom-text {
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  letter-spacing: 1.5px;
-  font-weight: bold;
-}
 
 /* Inner Box (Image Container) */
 .kempt-inner-box {
@@ -116,19 +101,6 @@ img {
 
 /* Responsive Adjustments */
 @media (max-width: 991px) {
-  .kempt-inner-box {
-    height: 50vh;
-    /* Slightly smaller for tablets */
-    max-height: 500px;
-  }
-
-  .kempt-bottom-text {
-    font-size: 1.1rem;
-  }
-
-  .kempt-top-text {
-    font-size: 0.75rem;
-  }
 
   .top-line {
     top: 32px;
@@ -179,21 +151,7 @@ img {
   }
 }
 
-@media (max-width: 576px) {
-  .kempt-inner-box {
-    height: 35vh;
-    /* Even smaller for very small screens */
-    max-height: 350px;
-  }
 
-  .kempt-bottom-text {
-    font-size: 0.9rem;
-  }
-
-  .kempt-top-text {
-    font-size: 0.65rem;
-  }
-}
 
 /* ---------------new ---------------- */
 /* CSS Styles */
@@ -246,16 +204,12 @@ img {
   background-color: #cfcfd0;
   border-radius: 9px;
   flex: 1;
-  /* Hide scrollbar */
   scrollbar-width: none;
-  /* Firefox */
   -ms-overflow-style: none;
-  /* IE and Edge */
 }
 
 .tab-container::-webkit-scrollbar {
   display: none;
-  /* Chrome, Safari and Opera */
 }
 
 .tab {
@@ -277,7 +231,6 @@ img {
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.12), 0px 3px 1px rgba(0, 0, 0, 0.04);
 }
 
-/* Responsive adjustments */
 @media (max-width: 767px) {
   .tab-wrapper {
     margin: 20px 10px 0px 10px;
@@ -518,7 +471,7 @@ img {
 }
 
 .tab-panel {
-  position: relative; /* NOT absolute */
+  position: relative; 
   width: 100%;
   display: block;
 }
